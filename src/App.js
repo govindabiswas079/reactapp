@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
+import { useSelector } from "react-redux"
 
 const App = () => {
-
+  const { name } = useSelector((state) => state?.app)
+  console.log(name)
   /*  */
   // 1. Custom sorting program in JS via Bubble Sort ?
   // let unSortArr = [4, -1, 34, "09", -9, 103]
@@ -655,7 +657,155 @@ const App = () => {
   //   { id: 5, name: "Kapil" },
   // ]));
 
+  // const removeDuplicateObject = (array = []) => {
+  // return Array.from(new Set(array.map((value) => value?.id))).map((id) => {
+  //   return array.find((item) => item?.id === id)
+  // })
 
+
+
+  /*  */
+  // let uniqArray = [];
+  // for (let i = 0; i < array.length; i++) {
+  // if (Array.isArray(array[i])) {
+  // uniqArray = uniqArray.concat(removeDuplicateObject(array[i]))
+  // } else {
+  // uniqArray.push(array[i])
+  // }
+  // }
+  // return uniqArray;
+  // return array.reduce((prev, next) => {
+  //   return prev.concat(Array.isArray(next) ? removeDuplicateObject(next) : next)
+  // }, [])
+  // }
+  // console.log(removeDuplicateObject([1, 2, [3, 4, [5, 6, 7, [8, 9, 10], [11, 12, [13, 14]]]]]));
+
+
+  /*  */
+  // find total from array element
+  // const fruits = ["apples", "oranges", "pears", "bananas", "pears", "melons", "apples", "apples"]
+  // const totalCount = (array = []) => {
+  // const countObj = Object.create({})
+  // for (let i = 0; i <= array.length; i++) {
+  //   if (countObj[array[i]]) {
+  //     countObj[array[i]] += 1
+  //   } else {
+  //     countObj[array[i]] = 1
+  //   }
+  // }
+  // for (let key of array) {
+  //   if (countObj[key]) {
+  //     countObj[key] += 1
+  //   } else {
+  //     countObj[key] = 1
+  //   }
+  // }
+  // array.forEach((values) => {
+  //   if (countObj[values]) {
+  //     countObj[values] += 1
+  //   } else {
+  //     countObj[values] = 1
+  //   }
+  // })
+  // return countObj;
+  // return array.reduce((prev, next) => {
+  // prev[next] = prev[next] ? prev[next] += 1 : prev[next] = 1
+  //   if (prev[next]) {
+  //     prev[next] += 1
+  //   } else {
+  //     prev[next] = 1
+  //   }
+  //   return prev
+  // }, {})
+  // };
+  // console.log(totalCount(fruits))
+
+
+  /*  */
+  /// find total count from object
+  // const data = { '1': 'apples', '2': 'oranges', '3': 'pears', '4': 'bananas', '5': 'pears', '6': 'melons', '7': 'apples', '8': 'apples' };
+  // const countTotal = (obj) => {
+  //   const countObj = Object.create({})
+  //   for (let key in obj) {
+  //     const keys = obj[key]
+  //     if (countObj[keys]) {
+  //       countObj[keys] += 1
+  //     } else {
+  //       countObj[keys] = 1
+  //     }
+  //   }
+  //   return countObj
+  // }
+  // console.log(countTotal(data))
+
+
+  // const countDuplicate = (array = []) => {
+  //   const count = array.reduce((prev, next) => {
+  //     const { value } = next;
+  //     // if (prev[value]) ++prev[value]
+  //     // else prev[value] = 1
+  //     prev[value] = prev[value]
+  //       ? prev[value] += 1
+  //       : prev[value] = 1
+  //     return prev
+  //   }, {});
+  //   return array.map((obj) => ({
+  //     ...obj,
+  //     count: count[obj.value]
+  //   }))
+  // }
+  // console.log(countDuplicate([
+  // { value: 1 },
+  // { value: 2 },
+  // { value: 3 },
+  // { value: 4 },
+  // { value: 5 },
+  // { value: 6 },
+  // { value: 1 },
+  // { value: 1 },
+  // { value: 2 },
+  // { value: 3 },
+  // { value: 3 },
+  // ]));
+
+
+  const originalArray = ['a', 'b', 'c', 'd', 'e'];
+
+  // Using splice() to modify the original array
+  // const removedElements = originalArray.splice(1, 1, 'x', 'y', 'z');
+  // console.log(originalArray);
+  // console.log(removedElements);
+
+  // Using slice() to extract a portion of the original array
+  // const newArray = originalArray.slice(1, 3);
+  // console.log(newArray);
+  // console.log(originalArray);
+
+
+  const sortArraybychar = (array = [], id) => {
+    // return array.filter((value, index, arr) => {
+    // return value?.id !== id
+    // })
+
+    // return array.filter((value, index, array) => {
+    //   const newIndex = array.findIndex((item) => item?.id === id)
+    //   array[newIndex].name = "z";
+    //   return array
+    // })
+  };
+
+  console.log(sortArraybychar([
+    { id: 1, name: "A", },
+    { id: 2, name: "B", },
+    { id: 3, name: "C", },
+    { id: 4, name: "D", },
+    { id: 5, name: "E", },
+    { id: 6, name: "F", },
+    { id: 7, name: "G", },
+    { id: 8, name: "H", },
+    { id: 9, name: "J", },
+    { id: 10, name: "K", },
+  ], 1))
 
 
   return (
