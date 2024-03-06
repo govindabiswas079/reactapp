@@ -794,18 +794,19 @@ const App = () => {
     // })
   };
 
-  // console.log(sortArraybychar([
-  //   { id: 1, name: "A", },
-  //   { id: 2, name: "B", },
-  //   { id: 3, name: "C", },
-  //   { id: 4, name: "D", },
-  //   { id: 5, name: "E", },
-  //   { id: 6, name: "F", },
-  //   { id: 7, name: "G", },
-  //   { id: 8, name: "H", },
-  //   { id: 9, name: "J", },
-  //   { id: 10, name: "K", },
-  // ], 1))
+  console.log(sortArraybychar([
+    { id: 1, name: "A", },
+    { id: 2, name: "B", },
+    { id: 3, name: "C", },
+    { id: 4, name: "D", },
+    { id: 5, name: "E", },
+    { id: 6, name: "F", },
+    { id: 7, name: "G", },
+    { id: 8, name: "H", },
+    { id: 9, name: "J", },
+    { id: 10, name: "K", },
+  ], 1))
+
   // Original object with nested structure
   const originalObj = {
     name: "John",
@@ -832,7 +833,9 @@ const App = () => {
   console.log("Shallow Copy:", shallowCopy);
   console.log("Deep Copy:", deepCopy);
 
-
+const data = [1,2,3,4,5,]
+// data[8] = 12
+console.log(data.slice(-2))
   return (
     <Fragment>
 
