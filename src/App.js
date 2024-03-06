@@ -806,7 +806,7 @@ const App = () => {
     { id: 9, name: "J", },
     { id: 10, name: "K", },
   ], 1))
-
+  
   // Original object with nested structure
   const originalObj = {
     name: "John",
@@ -833,9 +833,7 @@ const App = () => {
   console.log("Shallow Copy:", shallowCopy);
   console.log("Deep Copy:", deepCopy);
 
-const data = [1,2,3,4,5,]
-// data[8] = 12
-console.log(data.slice(-2))
+
   return (
     <Fragment>
 
