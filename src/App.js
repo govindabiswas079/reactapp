@@ -794,18 +794,43 @@ const App = () => {
     // })
   };
 
-  console.log(sortArraybychar([
-    { id: 1, name: "A", },
-    { id: 2, name: "B", },
-    { id: 3, name: "C", },
-    { id: 4, name: "D", },
-    { id: 5, name: "E", },
-    { id: 6, name: "F", },
-    { id: 7, name: "G", },
-    { id: 8, name: "H", },
-    { id: 9, name: "J", },
-    { id: 10, name: "K", },
-  ], 1))
+  // console.log(sortArraybychar([
+  //   { id: 1, name: "A", },
+  //   { id: 2, name: "B", },
+  //   { id: 3, name: "C", },
+  //   { id: 4, name: "D", },
+  //   { id: 5, name: "E", },
+  //   { id: 6, name: "F", },
+  //   { id: 7, name: "G", },
+  //   { id: 8, name: "H", },
+  //   { id: 9, name: "J", },
+  //   { id: 10, name: "K", },
+  // ], 1))
+  // Original object with nested structure
+  const originalObj = {
+    name: "John",
+    age: 30,
+    hobbies: ["reading", "cooking"],
+    address: {
+      city: "New York",
+      zip: "10001"
+    }
+  };
+
+  // Shallow copy example
+  const shallowCopy = Object.assign({}, originalObj);
+
+  // Deep copy example
+  const deepCopy = JSON.parse(JSON.stringify(originalObj));
+
+  // Modify the original object
+  originalObj.name = "Alice";
+  originalObj.hobbies.push("gardening");
+  originalObj.address.city = "Los Angeles";
+
+  console.log("Original Object:", originalObj);
+  console.log("Shallow Copy:", shallowCopy);
+  console.log("Deep Copy:", deepCopy);
 
 
   return (
