@@ -806,7 +806,7 @@ const App = () => {
     { id: 9, name: "J", },
     { id: 10, name: "K", },
   ], 1))
-  
+
   // Original object with nested structure
   const originalObj = {
     name: "John",
@@ -819,19 +819,63 @@ const App = () => {
   };
 
   // Shallow copy example
-  const shallowCopy = Object.assign({}, originalObj);
+  // const shallowCopy = Object.assign({}, originalObj);
 
   // Deep copy example
-  const deepCopy = JSON.parse(JSON.stringify(originalObj));
+  // const deepCopy = JSON.parse(JSON.stringify(originalObj));
 
   // Modify the original object
-  originalObj.name = "Alice";
-  originalObj.hobbies.push("gardening");
-  originalObj.address.city = "Los Angeles";
+  // originalObj.name = "Alice";
+  // originalObj.hobbies.push("gardening");
+  // originalObj.address.city = "Los Angeles";
+  // console.log("Original Object:", originalObj);
+  // console.log("Shallow Copy:", shallowCopy);
+  // console.log("Deep Copy:", deepCopy);
+  // console.log("prem".endsWith("m"))
 
-  console.log("Original Object:", originalObj);
-  console.log("Shallow Copy:", shallowCopy);
-  console.log("Deep Copy:", deepCopy);
+
+
+  // First asynchronous operation
+  function asyncOperation1() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // console.log("Async operation 1 completed");
+        resolve("Result of async operation 1");
+      }, 1000);
+    });
+  }
+
+  // Second asynchronous operation
+  function asyncOperation2(data) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // console.log("Async operation 2 completed with data:", data);
+        resolve("Result of async operation 2");
+      }, 1000);
+    });
+  }
+
+  // Third asynchronous operation
+  function asyncOperation3(data) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // console.log("Async operation 3 completed with data:", data);
+        resolve("Result of async operation 3");
+      }, 1000);
+    });
+  }
+
+  // Chain promises
+  asyncOperation1()
+    .then(result1 => asyncOperation2(result1))
+    .then(result2 => asyncOperation3(result2))
+    .then(finalResult => {
+      console.log("Final result:", finalResult);
+    })
+    .catch(error => {
+      console.error("An error occurred:", error);
+    });
+
 
 
   return (
