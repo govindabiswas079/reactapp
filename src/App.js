@@ -769,8 +769,7 @@ const App = () => {
   // ]));
 
 
-  const originalArray = ['a', 'b', 'c', 'd', 'e'];
-
+  // const originalArray = ['a', 'b', 'c', 'd', 'e'];
   // Using splice() to modify the original array
   // const removedElements = originalArray.splice(1, 1, 'x', 'y', 'z');
   // console.log(originalArray);
@@ -782,41 +781,41 @@ const App = () => {
   // console.log(originalArray);
 
 
-  const sortArraybychar = (array = [], id) => {
-    // return array.filter((value, index, arr) => {
-    // return value?.id !== id
-    // })
+  // const sortArraybychar = (array = [], id) => {
+  // return array.filter((value, index, arr) => {
+  // return value?.id !== id
+  // })
 
-    // return array.filter((value, index, array) => {
-    //   const newIndex = array.findIndex((item) => item?.id === id)
-    //   array[newIndex].name = "z";
-    //   return array
-    // })
-  };
+  // return array.filter((value, index, array) => {
+  //   const newIndex = array.findIndex((item) => item?.id === id)
+  //   array[newIndex].name = "z";
+  //   return array
+  // })
+  // };
 
-  console.log(sortArraybychar([
-    { id: 1, name: "A", },
-    { id: 2, name: "B", },
-    { id: 3, name: "C", },
-    { id: 4, name: "D", },
-    { id: 5, name: "E", },
-    { id: 6, name: "F", },
-    { id: 7, name: "G", },
-    { id: 8, name: "H", },
-    { id: 9, name: "J", },
-    { id: 10, name: "K", },
-  ], 1))
+  // console.log(sortArraybychar([
+  //   { id: 1, name: "A", },
+  //   { id: 2, name: "B", },
+  //   { id: 3, name: "C", },
+  //   { id: 4, name: "D", },
+  //   { id: 5, name: "E", },
+  //   { id: 6, name: "F", },
+  //   { id: 7, name: "G", },
+  //   { id: 8, name: "H", },
+  //   { id: 9, name: "J", },
+  //   { id: 10, name: "K", },
+  // ], 1))
 
   // Original object with nested structure
-  const originalObj = {
-    name: "John",
-    age: 30,
-    hobbies: ["reading", "cooking"],
-    address: {
-      city: "New York",
-      zip: "10001"
-    }
-  };
+  // const originalObj = {
+  //   name: "John",
+  //   age: 30,
+  //   hobbies: ["reading", "cooking"],
+  //   address: {
+  //     city: "New York",
+  //     zip: "10001"
+  //   }
+  // };
 
   // Shallow copy example
   // const shallowCopy = Object.assign({}, originalObj);
@@ -835,46 +834,144 @@ const App = () => {
 
 
 
-  // First asynchronous operation
-  function asyncOperation1() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // console.log("Async operation 1 completed");
-        resolve("Result of async operation 1");
-      }, 1000);
-    });
-  }
+  // // First asynchronous operation
+  // function asyncOperation1() {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // console.log("Async operation 1 completed");
+  //       resolve("Result of async operation 1");
+  //     }, 1000);
+  //   });
+  // }
 
-  // Second asynchronous operation
-  function asyncOperation2(data) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // console.log("Async operation 2 completed with data:", data);
-        resolve("Result of async operation 2");
-      }, 1000);
-    });
-  }
+  // // Second asynchronous operation
+  // function asyncOperation2(data) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // console.log("Async operation 2 completed with data:", data);
+  //       resolve("Result of async operation 2");
+  //     }, 1000);
+  //   });
+  // }
 
-  // Third asynchronous operation
-  function asyncOperation3(data) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        // console.log("Async operation 3 completed with data:", data);
-        resolve("Result of async operation 3");
-      }, 1000);
-    });
-  }
+  // // Third asynchronous operation
+  // function asyncOperation3(data) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       // console.log("Async operation 3 completed with data:", data);
+  //       resolve("Result of async operation 3");
+  //     }, 1000);
+  //   });
+  // }
 
-  // Chain promises
-  asyncOperation1()
-    .then(result1 => asyncOperation2(result1))
-    .then(result2 => asyncOperation3(result2))
-    .then(finalResult => {
-      console.log("Final result:", finalResult);
-    })
-    .catch(error => {
-      console.error("An error occurred:", error);
-    });
+  // // Chain promises
+  // asyncOperation1()
+  //   .then(result1 => asyncOperation2(result1))
+  //   .then(result2 => asyncOperation3(result2))
+  //   .then(finalResult => {
+  //     console.log("Final result:", finalResult);
+  //   })
+  //   .catch(error => {
+  //     console.error("An error occurred:", error);
+  //   });
+
+
+
+  // // rotate arary by right and left
+  // function rotateArrayLeft(arr, positions) {
+  // const effectiveRotations = positions % arr.length;
+  // return arr.slice(effectiveRotations).concat(arr.slice(0, effectiveRotations)); // form left side
+  // return arr.slice(-effectiveRotations).concat(arr.slice(0, -effectiveRotations));  // form right side
+  // }
+  // console.log(rotateArrayLeft([1, 2, 3, 4, 5, 6], 2));
+
+  // rotate arary by index
+  // function rotateNumber(index) {
+  //   var cal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  //   return cal.concat(cal.splice(0, index));
+  // }
+  // console.log(rotateNumber(2))
+
+
+  // find one missing number
+  // function findMissingNumber(arr) {
+  //   const expectedSum = (arr.length + 1) * (arr.length + 2) / 2;
+  //   const actualSum = arr.reduce((acc, num) => acc + num, 0);
+  //   return expectedSum - actualSum;
+  // }
+  // console.log(findMissingNumber([1, 2, 3, 4, 6, 7, 8, 9, 10]));
+
+
+
+  // merge two un-sorted array into single sorted array
+  // function mergeSortedArrays(arr1, arr2) {
+  //   const mergedArray = [];
+  //   let i = 0; // Index for arr1
+  //   let j = 0; // Index for arr2
+  //   while (i < arr1.length && j < arr2.length) {
+  //     if (arr1[i] < arr2[j]) {
+  //       mergedArray.push(arr1[i]);
+  //       i++;
+  //     } else {
+  //       mergedArray.push(arr2[j]);
+  //       j++;
+  //     }
+  //   }
+  //   // Add remaining elements from arr1 (if any)
+  //   while (i < arr1.length) {
+  //     mergedArray.push(arr1[i]);
+  //     i++;
+  //   }
+  //   // Add remaining elements from arr2 (if any)
+  //   while (j < arr2.length) {
+  //     mergedArray.push(arr2[j]);
+  //     j++;
+  //   }
+  //   return mergedArray;
+  // }
+  // console.log(mergeSortedArrays([1, 3, 5, 7], [2, 4, 6, 8]));
+
+
+  // find common element
+  // function findCommonElements(arr1, arr2) {
+  //   const commonElements = [];
+  //   for (let i = 0; i < arr1.length; i++) {
+  //     const element = arr1[i];
+  //     console.log(arr2[i] === arr1[i])
+  //     if (arr2.includes(element)) {
+  //       commonElements.push(element);
+  //     }
+  //   }
+  //   return commonElements;
+  // }
+  // console.log(findCommonElements([1, 2, 3, 4, 5, 11, 12, 13, 16], [1, 3, 4, 5, 6, 7]));
+
+
+  // swap two number
+  // function swap(arr, index1, index2) {
+  //   const temp = arr[index1];
+  //   arr[index1] = arr[index2];
+  //   arr[index2] = temp;
+  //   return arr || [];
+  // }
+  // console.log(swap([1, 2, 3, 4, 5], 0, 3));
+
+
+  /// reverse array without creating new array
+  // function reverseArrayInPlace(arr) {
+  //   let start = 0; 
+  //   let end = arr.length - 1;
+  //   while (start < end) {
+  //     const temp = arr[start];
+  //     arr[start] = arr[end];
+  //     arr[end] = temp;
+  //     start++;
+  //     end--;
+  //   }
+
+  //   return arr || []
+  // }
+  // console.log( reverseArrayInPlace([1, 2, 3, 4, 5, 6]));
 
 
 
