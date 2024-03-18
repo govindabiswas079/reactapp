@@ -973,7 +973,19 @@ const App = () => {
   // }
   // console.log( reverseArrayInPlace([1, 2, 3, 4, 5, 6]));
 
+  // const counter = () => {
+  //   let count = 0;
+  //   return () => count++
+  // };
+  // const count = counter()
+  // console.log(count())
+  // console.log(count())
 
+  for (var i = 0; i < 5; i++) {
+    setTimeout(() => function clog() {
+      console.log(i)
+    }, i * 1000)
+  }
 
   return (
     <Fragment>
