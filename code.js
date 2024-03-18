@@ -49,8 +49,8 @@ const swap = (array, index1, index2) => {
 // console.log(swap([1,2,3,4,5,6], 1, 5))
 
 // array of number to array element
-const array = [1234567890]
-// console.log(array.toString().split('').map(Number))
+const arraynumbers = [1234567890]
+// console.log(arraynumbers.toString().split('').map(Number))
 
 
 // rotate array
@@ -322,3 +322,13 @@ const findMin = (array) => {
 // console.log(findMin([10, 5, 20, 15, 8]))
 
 
+
+const num = 0
+// console.log(num || 10)
+
+const array = [1,2,3,4,5,6,7,8,9]
+// console.log(array.slice(3, 10))
+// console.log(array.splice(3, 1))
+// console.log(array)
+
+console.log([...array.splice(0, 3), 11, ...array.slice(4)])
